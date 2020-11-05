@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Admin</title>
+    <!--CSS dan LOGO-->
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link media="all" type="text/css" rel="stylesheet" href="/css/login.css">
+    <!--AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JS-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+<% if(message){ %>
+    <script type="text/javascript"> 
+        $(document).ready(function(){ 
+        $('#Sj2adjjqSj09x').trigger('click'); 
+      });  
+      function ok(){swal('<%- message.intro %>','<%- message.message %>','<%- message.type %>');}
+    </script> 
+    <input name="Sj2adjjqSj09x" id="Sj2adjjqSj09x" type="hidden" onclick="ok()" />
+    <% } %>   
+<body>  
+                
+    
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <!-- Icon -->
+          <div class="fadeIn first" style="padding-bottom:10pt;padding-top:10pt;">
+            <h2>LOGIN</h2>
+          </div>
+      
+          <!-- Login Form -->
+          <form action="" method="post" id="admin-login">
+            <div class="input-group mb-3">
+							<div class="input-group-append" style="padding-left:10pt;">
+								<span class="input-group-text"><i class="fa fa-user"></i></span>
+							</div>
+							<input type="text" id="username" class="fadeIn second" name="username" placeholder="USERNAME" maxlength="24">
+						</div>
+            <input type="submit" class="fadeIn fourth" value="Log In">
+          </form>
+        </div>
+
+
+    
+</body>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/pace.min.js"></script>
+<script src="/js/bootstrap_sistem.js"></script>
+<script src="/js/bootstrap_alert.min.js"></script>
+</html>

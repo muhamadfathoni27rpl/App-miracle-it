@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>MIRACLE IT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    <script src="/js/bootstrap_alert.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!--CSS-->
+    <link media="all" type="text/css" rel="stylesheet" href="/css/pembayaran.css">
+</head>
+<% if(message){ %>
+    <script type="text/javascript"> 
+        $(document).ready(function(){ 
+        $('#Sj2adjjqSj09x').trigger('click'); 
+      });  
+      function ok(){swal('<%- message.intro %>','<%- message.message %>','<%- message.type %>');}
+    </script> 
+    <input name="Sj2adjjqSj09x" id="Sj2adjjqSj09x" type="hidden" onclick="ok()" />
+    <% } %>        
+<body>     
+    <div class="container text-center">
+        <div class="row">
+            <form action="/pembayaran" method="post">
+            <div class="paymentCont">
+                <br>
+                            <div class="headingWrap">
+                                    <h3 class="headingTop text-center">Pilih Metode Pembayaran</h3>	
+                            </div>
+                            <div class="paymentWrap">
+                                <div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
+                                    <label class="btn paymentMethod active">
+                                        <div class="method alfa"></div>
+                                        <input type="radio" name="alfa" checked> 
+                                    </label>
+                                    <label class="btn paymentMethod">
+                                        <div class="method indo"></div>
+                                        <input type="radio" name="indo"> 
+                                    </label>
+                                    <label class="btn paymentMethod">
+                                        <div class="method kredit"></div>
+                                        <input type="radio" name="kredit">
+                                    </label>
+                                     <label class="btn paymentMethod">
+                                         <div class="method m-banking"></div>
+                                        <input type="radio" name="m-banking"> 
+                                    </label>
+                                 
+                                </div>        
+                            </div>
+                            <div class="footerNavWrap clearfix">
+                                <button class="btn btn-success pull-right btn-fyi">SELESAI <span class="glyphicon glyphicon-chevron-right"></span></button>
+                            </div>
+                        </div>
+                        </form>
+            
+        </div>
+    </div>   
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+          ©2020 MIRACLE IT
+        </div>
+        <!--/.Copyright-->
+    
+      </footer>        
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="reload/reload.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/pace.min.js"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/pace.min.js"></script>
+</body>
+</html>

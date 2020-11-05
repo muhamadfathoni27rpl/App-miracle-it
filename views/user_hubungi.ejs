@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MIRACLE IT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link media="all" type="text/css" rel="stylesheet" href="/css/hubungi.css">
+  <script src="/js/bootstrap_alert.min.js"></script>    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head> 
+<% if(message){ %>
+    <script type="text/javascript"> 
+        $(document).ready(function(){ 
+        $('#Sj2adjjqSj09x').trigger('click'); 
+      });  
+      function ok(){swal('<%- message.intro %>','<%- message.message %>','<%- message.type %>');}
+    </script> 
+    <input name="Sj2adjjqSj09x" id="Sj2adjjqSj09x" type="hidden" onclick="ok()" />
+    <% } %>   
+<body>
+    <%- include ('navbar/header') %>
+    <br>
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper px-md-4">
+                        <div class="row mb-5">
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-map-marker"></span>
+                            </div>
+                            <div class="text">
+                            <p><span>ALAMAT : </span> Jl. MT. Haryono 405 Semarang</p>
+                          </div>
+                      </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-phone"></span>
+                            </div>
+                            <div class="text">
+                            <p><span>PHONE : </span> <a href="tel://02130338611 ">021 30338611 </a></p>
+                          </div>
+                      </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="dbox w-100 text-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-paper-plane"></span>
+                            </div>
+                            <div class="text">
+                            <p><span>EMAIL : </span> <a href="mailto:info@gsidisplay.com">info@gsidisplay.com</a></p>
+                          </div>
+                      </div>
+                      
+                      </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-md-7">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <h3 class="mb-4">HUBUNGI KAMI</h3>
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm" action="/hubungi"> <!--CODINGAN PHP-->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="name">Nama Lengkap</label>
+                                                    <input type="text" class="form-control" name="name" id="name" placeholder="Nama lengkap">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6"> 
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Alamat Email</label>
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="#">Pesan</label>                                                    
+                                                    <textarea name="pesans" id="" class="form-control" cols="30" rows="10"></textarea>                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Kirim Pesan" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 order-md-first d-flex align-items-stretch">
+                                <div id="map" class="map"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer>
+    <p>@Copyright Programming Magang[PT GSI]</p>
+    <div class="footerPages">
+        <a href="/index">Home</a>
+        <a href="/about">Tentang Kami</a>
+        <a href="/project">Project</a>
+    </div>
+</footer>    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="reload/reload.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+</body>
+</html>

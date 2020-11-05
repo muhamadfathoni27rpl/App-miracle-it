@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Detail Barang <%=dataBarang.nama%></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <!-- ANIMASI -->
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+  <script src="/js/bootstrap_alert.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<% if(message){ %>
+  <script type="text/javascript"> 
+      $(document).ready(function(){ 
+      $('#Sj2adjjqSj09x').trigger('click'); 
+    });  
+    function ok(){swal('<%- message.intro %>','<%- message.message %>','<%- message.type %>');}
+  </script> 
+  <input name="Sj2adjjqSj09x" id="Sj2adjjqSj09x" type="hidden" onclick="ok()" />
+  <% } %>   
+<body>
+    <%- include ('navbar/header') %>
+  <section>
+    <div class="banner-bootom-w3-agileits py-5">
+       <div class="container py-xl-4 py-lg-2">
+         <div class="row">
+            <div class="col-lg-5 col-md-8 single-right-left ">
+              <div class="grid images_3_of_2">
+                <img src="/images/barang/<%=dataBarang.foto%>" style="width : 80%; height : 80%;" alt="" >
+              </div>
+
+            </div>
+            <div class="col-lg-7 single-right-left simpleCart_shelfItem">
+              <h3 class="mb-3" style="color:black;font-family:Arial, Helvetica, sans-serif; font-size:20pt;"><%=dataBarang.nama%></h3> <!--NAmA BARANG-->
+              <span class="badge badge-warning" style="color:black;font-family:Arial, Helvetica, sans-serif; font-size:10pt;">Rp. <%=dataBarang.harga%></span> <!--HARGA-->
+              <p class="mb-3" style="color:black;font-family:Arial, Helvetica, sans-serif; font-size:15pt;"><%=dataBarang.deskripsi%></p> <!--DESKRIPSI BARANG-->
+              <table class="table  table-hover table-striped w-full" style="background :lightgray;width:100%;">
+              
+                <tr style="color:black;padding:10px;font-family:Arial, Helvetica, sans-serif;font-size:10pt;" >
+
+                  <td align="center">KELEBIHAN</td>
+                  <td align="center">KEKURANGAN</td>
+                  <td align="center">FITUR</td>
+
+                </tr>
+                <tr style="color:black;padding:10px;font-family:Arial, Helvetica, sans-serif; font-size:10pt;">
+                  <th align="center"><%=dataBarang.kelebihan%></th>
+                  <td align="center"><%=dataBarang.kekurangan%></td>
+                  <td align="center"><%=dataBarang.fitur%></td>  
+                </tr>
+              </table>
+              <form action="/o/<%=dataBarang.url%>" method="post">
+                <p class="mb-3" style="color:black;font-family:Arial, Helvetica, sans-serif; font-size:10pt;"><strong>Stok tersisa : <%=dataBarang.stok%></strong></p>
+                <input type="number" name="jumlah" required placeholder="Masukan Jumlah">
+                <button class="btn btn-primary" type="submit">Keranjang</button>
+            </form>
+            </div>
+         </div>
+
+       </div>
+    </div>
+
+  </section>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="reload/reload.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MIRACLE IT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  </head>
+<body>  
+    <br>
+    <div class="container">
+        <div class="card shopping-cart">
+                 <div class="card-header bg-dark text-light">
+                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                     Keranjang
+                     <div class="clearfix"></div>
+                 </div>
+                 <div class="card-body">
+                    <%if(dataKeranjang == 0){ %>
+                        <h1>Tidak ada barang</h1>
+                    <% }else{ %>   
+                         <!-- PRODUCT -->
+                         <% for (var i = 0 ; i < dataKeranjang.length ; i ++ ){%>
+                            <% var stok = dataKeranjang[i].stok_keranjang%>  
+                         <div class="row">
+
+                             <div class="col-12 col-sm-12 col-md-2 text-center">
+                                     <img class="img-responsive" src="/images/barang/<%= dataKeranjang[i].foto%>" alt="prewiew" width="120" height="80">
+                             </div>
+                             <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                                 <h4 class="product-name"><strong><%= dataKeranjang[i].nama %></strong></h4>
+                                 <p>x<%=dataKeranjang[i].stok_keranjang%></p>
+                             </div>
+                             <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                                 <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                     <h6><strong><%=dataKeranjang[i].harga_keranjang %> </strong></h6>
+                                 </div>
+                                 <div class="col-2 col-sm-2 col-md-2 text-right">
+                                     
+                                         <a href="/hapus/<%=dataKeranjang[i].id_keranjang%>"><button type="number" class="btn btn-outline-danger" value="<%=stok%>"><i class="fa fa-trash" aria-hidden="true"></i></button></a>                                     
+                                 </div>
+                             </div>
+                         </div>
+                         <hr>
+                         <% } %>  
+                 </div>
+                 <div class="card-footer">
+                     <div class="pull-right" style="margin: 0px">
+                         <a href="/checkout" class="btn btn-success pull-right">Checkout</a>
+                         <div class="pull-right" style="margin: 5px">
+                             Total Harga <b>Rp. <%=harga%> </b>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+     </div>
+     <% } %>   
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="reload/reload.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/pace.min.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+</body>
+</html>

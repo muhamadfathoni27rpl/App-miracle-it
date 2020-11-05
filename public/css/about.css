@@ -1,0 +1,85 @@
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bordered-right {
+    border-right: 4px solid #ffff;
+}
+.container{
+    text-align:center;
+}
+.text-right{
+    text-align:center;
+}
+.col-md-5 {
+    position: absolute;
+    width:320px;
+    height:168px;
+    top:100px;
+}
+.upper{
+    padding-right : 10px;
+    padding-top : 30px;
+    margin : 0 0 30px;
+    text-transform: uppercase;
+    font-family: ''Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
+    font-size : 80pt;
+    color:#fff;
+}
+p{
+    color:#fff;
+}
+p .lead{
+    padding-right : 20px;
+    font-size: large;
+    line-height: 1.4;
+}
+img{
+    vertical-align: middle;
+    width:680px;
+    height:530px;
+}
+
+.bg{
+    position:relative;
+    width:1000px;
+    height:700px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#curve{
+    position: absolute;
+    width:1410.26px;
+    height:862.33px;
+    left:46.6px;
+    top:114.43px;
+}
+
+#curve path{
+    fill: #155dab;;
+}
+
+@media screen and (max-width:680px){
+
+	.container{
+		width: auto;
+		float: none;
+	}
+}
+
+
+@media screen and (max-width:300px){
+
+	.container{
+		width: auto;
+		float: none;
+	}
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/bootstrap_alert.min.js"></script>
+    <link rel="icon" type="image/png" href="/images/logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--JS-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>INDEX</title>
+</head>
+<% if(message){ %>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('#Sj2adjjqSj09x').trigger('click');
+      });
+      function ok(){swal('<%- message.intro %>','<%- message.message %>','<%- message.type %>');}
+    </script>
+    <input name="Sj2adjjqSj09x" id="Sj2adjjqSj09x" type="hidden" onclick="ok()" />
+    <% } %>
+<body>
+    <!-- Menggabungkan HTML di folder 'include' -->
+    <%- include('include/modal'); %>
+      </table>
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <ol class="breadcrumb">
+            <h1>DATA BARANG</h1>
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <div class="col-xl-12">
+          <div class="box box-primary">
+            <div class="box-header" style="padding-left: 10pt;;">
+              <a href="#tambah" class="btn btn-primary" role="button" title="Tambah Data"><i class="fa fa-plus"></i> TAMBAH</a>
+              </div>
+                <br>
+                <div class="card shadow mb-5">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>NAMA BARANG</th>
+                          <th>HARGA BARANG</th>
+                          <th>STOCK BARANG</th>
+                          <th>FOTO BARANG</th>
+                          <th>DESKRIPSI BARANG</th>
+                          <th>KELEBIHAN BARANG</th>
+                          <th>KEKURANGAN BARANG</th>
+                          <th>FITUR BARANG</th>
+                          <th>KATALOG BARANG</th>
+                          <th>ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% for (var i = 0 ; i < dataBarang.length ; i ++) { %>
+                    <tr>
+                      <td><%=dataBarang[i].nama%></td>
+                      <td><%=dataBarang[i].harga%></td>
+                      <td><%=dataBarang[i].stok%></td>
+                      <td><img src="/images/barang/<%=dataBarang[i].foto%>" style="width:50px;max-width: 100% !important;overflow: hidden;" alt="" title="gambar <%=dataBarang[i].nama%>"></td>
+                      <td><%=dataBarang[i].deskripsi%></td>
+                      <td><%=dataBarang[i].kelebihan%></td>
+                      <td><%=dataBarang[i].kekurangan%></td>
+                      <td><%=dataBarang[i].fitur%></td>
+                      <td><%=dataBarang[i].nama_katalog%></td>
+                      <td>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#updateBarang"
+                         data-id="<%=dataBarang[i].id_barang%>"
+                         data-nama="<%=dataBarang[i].nama%>"
+                         data-harga="<%=dataBarang[i].harga%>"
+                         data-stok="<%=dataBarang[i].stok%>"
+                         >Update</button>
+                        <a class="btn btn-danger" onclick="hapusBarang(event)" href="/admin/hapus_barang/<%=dataBarang[i].id_barang%>"><i class="fa fa-trash"></i></a>
+                      </td>
+                    </tr>
+                    <% } %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  <div style="margin-top: 7%;">
+    <h1>PESANAN</h1>
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered" id="TabelPesanan">
+        <thead>
+          <tr>
+            <th>Nama Pemesan</th>
+            <th>Nomor Telepon</th>
+            <th>Provinsi</th>
+            <th>Kabupaten / Kota</th>
+            <th>Kecamatan</th>
+            <th>Kode Pos</th>
+            <th>Alamat</th>            
+            <th>Nama</th>  
+            <th>Total</th>     
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var x = 0 ; x < dataPesan.length ; x ++){ %>            
+            <% var barange = dataPesan[x].barang %>              
+            <% var barange2 = JSON.parse(JSON.parse(barange)) %>              
+            <tr>
+              <td><%= dataPesan[x].nama_penerima%></td>
+              <td><%= dataPesan[x].telepon_penerima%></td>
+              <td><%= dataPesan[x].provinsi%></td>
+              <td><%= dataPesan[x].kk%></td>
+              <td><%= dataPesan[x].kecamatan%></td>
+              <td><%= dataPesan[x].kodepos%></td>
+              <td><%= dataPesan[x].detail%></td>
+              <td><% for(var y = 0 ; y < barange2.length ; y ++){ %>            
+                <p>•<%= barange2[y].namaBarang %></p>
+                <% } %>
+              </td>                                
+              <td><% for(var r = 0 ; r < barange2.length ; r ++){ %>            
+                <p>•<%= barange2[r].jumlah %></p>
+                <% } %>
+              </td>                
+            </tr>
+          <% } %>
+        </tbody>
+        </table>
+    </div>
+  </div>
+
+
+    <!--TAMBAHHH BARANG BOSS-->
+    <div class="content-wrapper" id="tambah" style="margin-top: 7%;">
+      <section class="content-header">
+        <ol class="breadcrumb">
+          <h1>TAMBAH BARANG </h1>
+        </ol>
+      </section>
+      </section>
+      <section class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box box-primary">
+              <form action="/admin/tambah_barang" method="POST" enctype="multipart/form-data">
+                <div class="box-body" style="padding-left:10pt;">
+                  <div class="form-group">
+                    <label>NAMA BARANG</label>
+                    <input type="text" name="nama" class="form-control" placeholder="NAMA BARANG " required>
+                  </div>
+                  <div class="form-group">
+                    <label>STOCK BARANG </label>
+                    <input type="number" name="stok" class="form-control" placeholder=" STOCK BARANG " required>
+                  </div>
+                  <div class="form-group">
+                    <label>HARGA BARANG</label>
+                    <input type="number" name="harga" class="form-control" placeholder="HARGA BARANG" required>
+                  </div>
+                  <div class="form-group">
+                    <label>DESKRIPSI BARANG</label>
+                    <textarea name="deskripsi" class="form-control" placeholder="DESKRIPSI BARANG" required id="" cols="30" rows="10"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>KELEBIHAN BARANG</label>
+                    <input type="text" name="kelebihan" class="form-control" placeholder="KELEBIHAN BARANG" required>
+                  </div>
+                  <div class="form-group">
+                    <label>KEKURANGAN BARANG</label>
+                    <input type="text" name="kekurangan" class="form-control" placeholder="KEKURANGAN BARANG" required>
+                  </div>
+                  <div class="form-group">
+                    <label>FITUR BARANG</label>
+                    <input type="text" name="fitur" class="form-control" placeholder="FITUR BARANG" required>
+                  </div>
+                  <div class="form-group">
+                    <label>FOTO BARANG</label>
+                    <select name="katalog" class="form-control">
+                      <option value="1">ROUTER</option>
+                      <option value="2">SWITCH</option>
+                      <option value="3">SERVER AND STORAGE</option>
+                      <option value="4">FIREWALL</option>
+                      <option value="5">ACCESS POINT</option>
+                      <option value="6">MEETING SOLUTION</option>
+                      <option value="7">ENDPOINT FIREWALL</option>
+                      <option value="8">CCTV</option>
+                      <option value="9">LAPTOP AND PC</option>
+                      <option value="10">STRUCTURED CABLE</option>
+                      <option value="11">ACESS CONTROL</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>FOTO BARANG</label>
+                    <input type="file" name="foto" class="form-control-file" placeholder="IMAGE" required>
+                  </div>
+                </div>
+                <div class="box-footer" style="padding-left:10pt;">
+                  <button type="submit" class="btn btn-primary" title="Simpan Data"> <i class="glyphicon glyphicon-floppy-disk"></i>TAMBAH</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+</body>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/pace.min.js"></script>
+<script src="/js/bootstrap_sistem.js"></script>
+<script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">$('#dataTable').DataTable();$('#TabelPesanan').DataTable()</script>
+</html>

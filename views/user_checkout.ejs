@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MIRACLE IT</title>
+  <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/brands.min.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link media="all" type="text/css" rel="stylesheet" href="/css/checkout.css">    
+</head>
+<body>
+<!--Main layout-->
+  <main class="mt-5 pt-4">
+    <div class="container wow fadeIn">
+
+      <!-- Heading -->
+      <h2 class="my-5 h2 text-center">CHECKOUT FORM</h2>
+
+      <!--Grname row-->
+      <div class="row">
+
+        <!--Grname column-->
+        <div class="col-md-8 mb-6">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <form class="card-body" action="/checkout" method="post">
+
+              <!--Grname row-->
+              <div class="row">
+
+                <!--Grname column-->
+                <div class="col-md-6 mb-2">
+
+                  <!--Nama Lengkap-->
+                  <div class="md-form ">
+                    <label for="nama" class="">Nama lengkap</label>
+                    <input type="text" name="nama" class="form-control">
+                  </div>
+
+                </div>
+                <!--Grname column-->
+
+                <!--Grname column-->
+                <div class="col-md-6 mb-2">
+
+                  <!--Nomor Handhphone-->
+                  <div class="md-form">
+                    <label for="telepon" class="">Nomor Handphone</label>
+                    <input type="number" name="telepon" class="form-control">
+                  </div>
+
+                </div>
+                <!--Grname column-->
+
+              </div>
+              <!--Grname row-->
+
+              <!--Provinsi-->
+              <div class="md-form mb-5">
+                <label for="provinsi" class="">Provinsi</label>
+                <input type="text" name="provinsi" class="form-control">
+              </div>
+
+              <!--Kota-->
+              <div class="md-form mb-5">
+                <label for="kk" class="">Kota / Kabupaten</label>
+                <input type="text" name="kk" class="form-control">
+              </div>
+
+              <!--Grname row-->
+              <div class="row">
+
+                <!--Grname column-->
+                <!--KECAMTAN-->
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <label for="kecamatan" class="">Kecamatan</label>
+                  <input type="text" name="kecamatan" class="form-control">
+                </div>
+                <!--Grname column-->
+
+                <!--Grname column-->
+                <!--KODE POS-->
+                <div class="col-lg-4 col-md-6 mb-4">
+                <label for="kodepos" class="">Kode Pos</label>
+                <input type="number" name="kodepos" class="form-control">
+                </div>
+                <!--Grname column-->
+
+              </div>
+              <!--Grname row-->
+              <div class="row">
+                <label for="detail" class="">Alamat lengkap</label>
+                <textarea name="detail" name="" cols="60" rows="10"></textarea>
+              </div>
+              <hr class="mb-4">
+              <button class="btn btn-primary btn-lg btn-block" type="submit">Buat Pesanan</button>
+
+            </form>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grname column-->
+        <div class="col-md-4 mb-4">
+          <!-- Cart -->
+          <ul class="list-group mb-3 z-depth-1">
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Total (RP)</span>
+              <strong>Rp.<%=total%></strong>
+            </li>
+          </ul>
+          <!-- Cart -->
+
+        </div>
+        <!--Grname column-->
+
+      </div>
+
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      ©2020 MIRACLE IT
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="reload/reload.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/pace.min.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+</body>
+</html>

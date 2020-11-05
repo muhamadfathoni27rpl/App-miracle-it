@@ -1,0 +1,29 @@
+1. Download Nodejs dulu bos que >> https://nodejs.org/dist/v12.18.3/node-v12.18.3-x64.msi + install
+2. Menggunakan MySQL Database . Download XAMPP versi TERBARU >> https://www.apachefriends.org/download.html + install
+3. Jika 1 & 2 selesai Buka terminal / CMD
+4. IMPORT database 'psg_1.sql' di PhpMyAdmin
+5. cd /folder/letak/kau/simpan/folder_ini "contoh : cd F:/code/psg_1"
+6. output terminal / cmd akan seperti ini "contoh : F:\code\psg_1>"
+7. ketik 'npm i' di terminal / cmd
+8. Jika ada ERROR , 'npm i' lagi
+9. ketik 'npm i nodemon' di terminal / cmd 
+10. terakhir ketik 'nodemon app'
+
+url web : http://localhost:3000
+
+-Front end Main-
+Folder 'public' >>> Tempat Assets seperti css , js , gambar , dll
+       'views'  >>> Tempat akses Front end html 5 (format = .ejs)
+
+-Back end Main-       
+Folder 'routes'     >>> routing link url
+       'controller' >>> backend Main
+       'middleware' >>> saya buat untuk akses function
+       'models'     >>> schema tabel dari database MySQL (intinya copy paste data tabel seperti kolom id , usernme , password , dst...)
+       'security'   >>> *Jangan di sentuh/ubah/hapus.
+
+File   'app.js'     >>> File Menjalankan progam & set up
+untuk merubah PENERIMA EMAIL dari system
+ubah email pada file /controller/main.js 
+LINE 306
+LINE 366

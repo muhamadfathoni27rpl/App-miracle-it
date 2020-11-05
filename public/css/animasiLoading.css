@@ -1,0 +1,19 @@
+.modals {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgb(0, 0, 0) 
+                url('/images/loading.webp') 
+                50% 50% 
+                no-repeat;
+}
+body.loading .modals {
+    overflow: hidden;   
+}
+body.loading .modals {
+    display: block;
+}

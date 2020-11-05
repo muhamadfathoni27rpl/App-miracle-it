@@ -1,0 +1,51 @@
+<!-- Update Barang -->
+<div class="modal fade" id="updateBarang" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update Barang</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="/admin/update_barang" method="POST" id="" enctype="multipart/form-data">
+            <input type="hidden" class="form-control" name="id" id="id">
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Nama Barang :</label>
+                <input type="text" required class="form-control" name="namaBarang" id="namaBarang">
+            </div>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Harga Barang:</label>
+                <input type="number" required class="form-control" name="hargaBarang" id="hargaBarang">
+            </div>
+            <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Stok Barang:</label>
+                <input type="number" required class="form-control" name="stokBarang" id="stokBarang">
+            </div>
+            <div class="form-group">
+              <input type="file" name="fotoBarang" class="form-control-file" />
+          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">tutup</button>
+              <input type="submit" value="Update" class="btn btn-info">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      $('#updateBarang').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget)
+          var id = button.data('id'),
+          nama = button.data('nama'),
+          harga = button.data('harga') ,
+          stok = button.data('stok'),
+          modal = $(this);
+          modal.find('.modal-body #id').val(id)
+          modal.find('.modal-body #namaBarang').val(nama)
+          modal.find('.modal-body #stokBarang').val(stok)
+          modal.find('.modal-body #hargaBarang').val(harga)
+      })
+  </script>
