@@ -2,7 +2,7 @@ var mysql = require('mysql')
 var koneksi = mysql.createConnection({    
     host:'localhost',
     user:'root',
-    password:'arekmalang45',
+    password:'',
     database:'psg_1',
     multipleStatements:true
 })
