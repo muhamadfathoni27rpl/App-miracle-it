@@ -23,7 +23,12 @@ Folder 'routes'     >>> routing link url
        'security'   >>> *Jangan di sentuh/ubah/hapus.
 
 File   'app.js'     >>> File Menjalankan progam & set up
+-
 untuk merubah PENERIMA EMAIL dari system
 ubah email pada file /controller/main.js 
 LINE 306
 LINE 366
+-
+untuk setting database
+ubah password *jika database Mysql sudah di password
+di file /models/sequelize.js & /models/sc_database.js
